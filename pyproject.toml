@@ -1,0 +1,50 @@
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+
+
+[tool.poetry]
+name = "course_gradio"
+version = "0.0.0"
+description = ""
+authors = ["Marco Sampaio <marcoopsampaio@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+pandas = "*"
+matplotlib = "*"
+scikit-learn = "*"
+torch = "*"
+transformers = "*"
+python-dotenv = "^1.0.1"
+gradio = "^5.20.1"
+
+[tool.poetry.group.dev.dependencies]
+isort = "*"
+ipython = "^8.10.0"
+pytest = "*"
+pytest-cov = "*"
+pytest-env = "*"
+black = {version = "^22.10.0", extras = ["jupyter", "d"]}
+flake8 = "^4.0.1"
+flake8-docstrings = "*"
+flake8-mypy = "*"
+mypy = "^1.5.1"
+pre-commit = "^2.17.0"
+types-PyYAML = "*"
+types-freezegun = "*"
+types-requests = "^2.28.0"
+filelock = "*"
+virtualenv = "*"
+distlib = "*"
+coverage = "7.5.4"
+jupyter = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
